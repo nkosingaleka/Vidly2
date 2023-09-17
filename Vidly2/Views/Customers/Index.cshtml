@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Vidly2.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Membership Type</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.FirstName</th>
+                <td>@item.LastName</td>
+                <td>@item.MembershipType.Name</td>
+                <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
+
+
